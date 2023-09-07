@@ -50,7 +50,6 @@ function TodoShow() {
             })
             const res = await resp.json(); // ctx.body.data
             const { data } = res;
-            // console.log(data);
             if (res.success) {
                 setTodos([...data] || [])
             }

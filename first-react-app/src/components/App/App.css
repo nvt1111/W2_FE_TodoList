@@ -62,3 +62,11 @@
   margin-bottom: 6px;
   padding: 3px 10px;
 }
+.btn {
+  float: right;
+  width: 94px
+}
+
+.input {
+  width: 250px
+}
