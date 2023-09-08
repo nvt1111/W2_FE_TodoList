@@ -26,7 +26,7 @@ function TodoShow() {
                 },
                 body: JSON.stringify({
                     "title": text,
-                    "completed": false
+                    "completed": false,
                 }),
             });
 
