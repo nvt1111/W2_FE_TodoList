@@ -1,24 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Todo from './Todo';
 import TodoForm from './TodoForm';
+import useFetchData from '../Hooks/useFetchApi.js';
 
 function TodoShow() {
-    const [todos, setTodos] = useState([]);// khởi tạo là 1 arr
-
-
-    //todo: cái đoan loadTodo này nghiên cứu viết thành 1 hàm useFetchApi để có muốn còn xử dụng lại nhé 
-    async function loadTodoes() {
-        const resp = await fetch('http://localhost:3001/api/todos');
-        const todolist = await resp.json(); //  Obj
-        setTodos(todolist["data"]);
-        return todolist;
-    }
-
-    useEffect(() => {
-        console.log('Component mounted');
-        loadTodoes();
-    }, [])
-
+    const { todos, setTodos } = useFetchData();
     const addTodo = async text => {
         try {
             const resp = await fetch("http://localhost:3001/api/todos", {
