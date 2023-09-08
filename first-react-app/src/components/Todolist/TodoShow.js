@@ -5,6 +5,8 @@ import TodoForm from './TodoForm';
 function TodoShow() {
     const [todos, setTodos] = useState([]);// khởi tạo là 1 arr
 
+
+    //todo: cái đoan loadTodo này nghiên cứu viết thành 1 hàm useFetchApi để có muốn còn xử dụng lại nhé 
     async function loadTodoes() {
         const resp = await fetch('http://localhost:3001/api/todos');
         const todolist = await resp.json(); //  Obj
