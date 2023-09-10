@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function TodoForm({ addTodo, handleSubmit, value, setValue }) {
+function TodoForm({ handleSubmit, value, setValue }) {
 
     return (
         <div class='todo'>
