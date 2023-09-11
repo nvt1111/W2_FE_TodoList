@@ -30,6 +30,7 @@ function TodoShow() {
 
     const completeTodo = async (idTodo) => {
         try {
+            //todo: cái đoạn fetch này anh thấy dùng nhiều quá làm sao tổng quát hóa đc đoạn fetch này không ?`
             const resp = await fetch(`http://localhost:3001/api/todo/${idTodo}`, {
                 method: 'PUT',
                 headers: {
