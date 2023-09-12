@@ -1,12 +1,11 @@
-// import React, { useEffect, useState } from 'react'
 import './App.css';
-import TodoShow from '../Todolist/TodoShow';
+import Todoes from '../Todolist/Todoes';
 
 function App() {
 
   return (
     <div className="app">
-      <TodoShow />
+      <Todoes />
     </div>
   );
 }

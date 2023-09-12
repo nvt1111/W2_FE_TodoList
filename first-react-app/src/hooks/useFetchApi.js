@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
+import { baseUrl } from '../helpers/constants/baseUrl';
 
 const useFetchData = () => {
     const [todos, setTodos] = useState([])
     async function loadTodoes() {
-        const resp = await fetch('http://localhost:3001/api/todos');
+        const path = '/todos';
+        const url = `${baseUrl}${path}`;
+        const resp = await fetch(url);
         const todolist = await resp.json(); //  Obj
         setTodos(todolist["data"]);
     }
@@ -15,4 +18,4 @@ const useFetchData = () => {
     return { todos, setTodos }
 }
 
-export default useFetchData
+export default useFetchData;
